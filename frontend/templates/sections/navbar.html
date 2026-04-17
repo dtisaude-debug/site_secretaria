@@ -1,0 +1,33 @@
+<nav class="navbar" id="navbar">
+  <div class="container">
+
+    <!-- Logo -->
+    <a href="#" class="navbar-brand">
+      <!-- <div class="brand-icon">
+        <i class="fas fa-heartbeat"></i>
+      </div>
+      <div class="brand-text">
+        <span>SAÚDE</span>
+        <span>Secretaria Municipal</span>
+      </div> -->
+      <img class="navbar-logo" style="width: 180px;" src="{{ url_for('static', filename='images/hero-page.png') }}" alt="Profissional de saúde" />
+    </a>
+
+    <!-- Links -->
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#hero"          class="active">Página Inicial</a></li>
+      <li><a href="#sobre">Sobre Nós</a></li>
+      <li><a href="#departamentos">Departamentos</a></li>
+      <li><a href="#noticias">Notícias</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul>
+
+    <!-- Hamburger mobile -->
+    <button class="hamburger" id="hamburger" aria-label="Abrir menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+  </div>
+</nav>

@@ -1,0 +1,109 @@
+/* =============================================
+   Contato.css
+============================================= */
+.contato {
+  background: var(--navy);
+  padding: 70px 0 80px;
+}
+
+.contato h2 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--white);
+  margin-bottom: 30px;
+}
+
+.contato-form { max-width: 540px; }
+
+.form-group { margin-bottom: 18px; }
+
+.form-group label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--white);
+  margin-bottom: 6px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: none;
+  border-radius: 6px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.85rem;
+  color: var(--text-dark);
+  background: var(--white);
+  outline: none;
+  transition: box-shadow 0.2s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  box-shadow: 0 0 0 3px rgba(26,188,156,0.4);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* Botão */
+.btn-enviar {
+  background: var(--yellow);
+  color: var(--white);
+  border: none;
+  padding: 12px 36px;
+  border-radius: 30px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: auto;
+}
+
+.btn-enviar:hover {
+  background: var(--orange);
+  transform: translateY(-2px);
+}
+
+/* Estado loading */
+.btn-enviar.loading {
+  background: #aaa;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.btn-enviar.loading .fa-paper-plane {
+  display: none;
+}
+
+/* Alerta de feedback */
+.form-alert {
+  max-width: 540px;
+  padding: 14px 18px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.form-alert.success {
+  background: rgba(26,188,156,0.15);
+  border: 1px solid var(--teal);
+  color: #a8f0e0;
+}
+
+.form-alert.error {
+  background: rgba(192,57,43,0.15);
+  border: 1px solid #c0392b;
+  color: #f1948a;
+}

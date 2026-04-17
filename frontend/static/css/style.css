@@ -1,0 +1,16 @@
+/* =============================================
+   ARQUIVO PRINCIPAL — importa todas as seções
+   Ordem importa! Base sempre primeiro.
+   Sempre que for criar um novo arquivo CSS, importe aqui para garantir que ele seja carregado.
+============================================= */
+
+@import url('base.css');
+@import url('navbar.css');
+@import url('hero.css');
+@import url('sobre.css');
+@import url('servicos.css');
+@import url('departamentos.css');
+@import url('noticias.css');
+@import url('contato.css');
+@import url('footer.css');
+@import url('responsive.css');

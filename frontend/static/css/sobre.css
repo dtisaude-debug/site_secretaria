@@ -1,0 +1,83 @@
+/* =============================================
+   Sobre.css
+============================================= */
+.sobre {
+  padding: 70px 0;
+  background: var(--white);
+}
+
+.sobre .container {
+  display: flex;
+  align-items: flex-start;
+  gap: 50px;
+}
+
+.sobre-content { flex: 1.2; }
+
+.sobre-content h2 {
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 18px;
+}
+
+.sobre-content p {
+  font-size: 0.88rem;
+  color: var(--text-gray);
+  line-height: 1.8;
+  margin-bottom: 28px;
+}
+
+.sobre-content h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 14px;
+}
+
+/* Lista de valores */
+.valores-lista li {
+  font-size: 0.88rem;
+  color: var(--text-gray);
+  padding: 4px 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.valores-lista li::before {
+  content: '•';
+  color: var(--teal);
+  font-size: 1.2rem;
+}
+
+/* Brasão */
+.sobre-brasao {
+  flex: 0.8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sobre-brasao img {
+  max-width: 340px;
+  border-radius: 4px;
+  filter: drop-shadow(0 6px 18px rgba(13,43,94,0.15));
+}
+
+.brasao-placeholder {
+  width: 220px;
+  height: 220px;
+  background: var(--light-gray);
+  border-radius: 12px;
+  border: 2px dashed #ddd;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #bbb;
+  font-size: 0.75rem;
+  gap: 10px;
+}
+
+.brasao-placeholder i { font-size: 3rem; }

@@ -1,0 +1,78 @@
+/* =============================================
+   Tablet de proporções: (até 900px)
+============================================= */
+@media (max-width: 900px) {
+  .dept-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* =============================================
+    Tablet de proporções: (até 768px)
+============================================= */
+@media (max-width: 768px) {
+
+  /* Navbar */
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 72px; left: 0; right: 0;
+    background: var(--white);
+    flex-direction: column;
+    gap: 0;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+    z-index: 999;
+  }
+
+  .nav-links.open  { display: flex; }
+  .nav-links a     { padding: 14px 24px; border-bottom: 1px solid var(--light-gray); font-size: 0.95rem; }
+  .nav-links a::after { display: none; }
+  .hamburger       { display: flex; }
+
+  /* Hero */
+  .hero-cross { display: none; }
+
+  .hero .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-text h1 { font-size: 1.8rem; }
+  .hero-image   { display: none; }
+
+  /* Sobre */
+  .sobre .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sobre-brasao        { order: -1; }
+  .sobre-brasao img    { max-width: 170px; }
+
+  /* Notícias */
+  .noticias-grid { grid-template-columns: 1fr; }
+
+  /* Contato */
+  .contato-form  { max-width: 100%; }
+}
+
+/* =============================================
+    Mobile (até 480px)
+============================================= */
+@media (max-width: 480px) {
+
+  .hero-text h1 { font-size: 1.5rem; }
+
+  .dept-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  .servicos-grid   { gap: 14px; }
+  .servico-icon    { width: 48px; height: 48px; font-size: 1.3rem; }
+
+  .departamentos h2,
+  .contato h2      { font-size: 1.7rem; }
+
+  .footer-logos    { flex-direction: column; gap: 16px; }
+}

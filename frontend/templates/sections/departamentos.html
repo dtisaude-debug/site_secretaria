@@ -1,0 +1,214 @@
+<section class="departamentos" id="departamentos">
+  <div class="container">
+    <h2>Departamentos</h2>
+
+    <!-- Wrapper do Carousel -->
+    <div class="carousel-wrapper">
+
+      <!-- Seta Esquerda -->
+      <button class="carousel-btn prev" id="deptPrev" aria-label="Anterior">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+
+      <!-- Track com os cards -->
+      <div class="carousel-track-container">
+        <div class="carousel-track" id="deptTrack">
+
+          <!-- TFD -->
+          <div class="dept-card tfd">
+            <div class="dept-card-img">
+              <i class="fas fa-ambulance"></i>
+            </div>
+            <div class="dept-card-body">
+              <div class="dept-sigla">TFD</div>
+              <div class="dept-nome">Tratamento Fora do Domicílio</div>
+              <button
+                class="btn-dept"
+                onclick="openModal('tfd')"
+              >
+                Clique para saber mais
+              </button>
+            </div>
+          </div>
+
+          <!-- VISA -->
+          <div class="dept-card visa">
+            <div class="dept-card-img">
+              <i class="fas fa-search"></i>
+            </div>
+            <div class="dept-card-body">
+              <div class="dept-sigla">VISA</div>
+              <div class="dept-nome">Vigilância Sanitária</div>
+              <button
+                class="btn-dept"
+                onclick="openModal('visa')"
+              >
+                Clique para saber mais
+              </button>
+            </div>
+          </div>
+
+          <!-- DUE -->
+          <div class="dept-card due">
+            <div class="dept-card-img">
+              <i class="fas fa-exclamation-triangle"></i>
+            </div>
+            <div class="dept-card-body">
+              <div class="dept-sigla">DUE</div>
+              <div class="dept-nome">Urgência e Emergência</div>
+              <button
+                class="btn-dept"
+                onclick="openModal('due')"
+              >
+                Clique para saber mais
+              </button>
+            </div>
+          </div>
+
+          <!-- DAS -->
+          <div class="dept-card das">
+            <div class="dept-card-img">
+              <i class="fas fa-hands-helping"></i>
+            </div>
+            <div class="dept-card-body">
+              <div class="dept-sigla">DAS</div>
+              <div class="dept-nome">Departamento de Atenção à Saúde</div>
+              <button
+                class="btn-dept"
+                onclick="openModal('das')"
+              >
+                Clique para saber mais
+              </button>
+            </div>
+          </div>
+
+          <!-- CAPS -->
+          <div class="dept-card caps">
+            <div class="dept-card-img">
+              <i class="fas fa-brain"></i>
+            </div>
+            <div class="dept-card-body">
+              <div class="dept-sigla">CAPS</div>
+              <div class="dept-nome">Centro de Atenção Psicossocial</div>
+              <button
+                class="btn-dept"
+                onclick="openModal('caps')"
+              >
+                Clique para saber mais
+              </button>
+            </div>
+          </div>
+
+          <!-- DRACA -->
+          <div class="dept-card draca">
+            <div class="dept-card-img">
+              <i class="fas fa-book-medical"></i>
+            </div>
+            <div class="dept-card-body">
+              <div class="dept-sigla">DRACA</div>
+              <div class="dept-nome">Departamento de Regulação, Auditoria, Controle e Avaliação</div>
+              <button
+                class="btn-dept"
+                onclick="openModal('draca')"
+              >
+                Clique para saber mais
+              </button>
+            </div>
+          </div>
+
+           <!-- DGTES -->
+           <div class="dept-card dgtes">
+            <div class="dept-card-img">
+              <i class="fas fa-chalkboard-teacher"></i>
+            </div>
+            <div class="dept-card-body">
+              <div class="dept-sigla">DGTES</div>
+              <div class="dept-nome">Gestão do Trabalho e Educação em Saúde</div>
+              <button class="btn-dept" onclick="openModal('dgtes')">
+                Clique para saber mais
+              </button>
+            </div>
+          </div>
+
+          <!-- DPGSUS -->
+          <div class="dept-card dpgsus">
+            <div class="dept-card-img">
+              <i class="fas fa-chart-line"></i>
+            </div>
+            <div class="dept-card-body">
+              <div class="dept-sigla">DPGSUS</div>
+              <div class="dept-nome">Planejamento e Gerenciamento do SUS</div>
+              <button class="btn-dept" onclick="openModal('dpgsus')">
+                Clique para saber mais
+              </button>
+            </div>
+          </div>
+
+          <!-- DACS -->
+          <div class="dept-card dacs">
+            <div class="dept-card-img">
+              <i class="fas fa-solid fa-cart-arrow-down"></i>
+            </div>
+            <div class="dept-card-body">
+              <div class="dept-sigla">DACS</div>
+              <div class="dept-nome">Departamento de administração, compras e serviços</div>
+              <button class="btn-dept" onclick="openModal('dacs')">
+                Clique para saber mais
+              </button>
+            </div>
+          </div>
+
+
+        </div><!-- fim carousel-track -->
+      </div>
+
+      <!-- Seta Direita -->
+      <button class="carousel-btn next" id="deptNext" aria-label="Próximo">
+        <i class="fas fa-chevron-right"></i>
+      </button>
+
+    </div><!-- fim carousel-wrapper -->
+
+    <!-- Dots de navegação -->
+    <div class="carousel-dots" id="deptDots"></div>
+
+  </div>
+</section>
+
+
+<!-- ==========================================
+     MODAL DE DEPARTAMENTOS
+=========================================== -->
+<div class="modal-overlay" id="modalOverlay" onclick="closeModal()">
+  <div class="modal-box" onclick="event.stopPropagation()">
+
+    <!-- Cabeçalho do modal -->
+    <div class="modal-header" id="modalHeader">
+      <div class="modal-icon" id="modalIcon">
+        <i id="modalIconFA"></i>
+      </div>
+      <div>
+        <h3 id="modalSigla"></h3>
+        <p id="modalNome"></p>
+      </div>
+      <button class="modal-close" onclick="closeModal()" aria-label="Fechar">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+
+    <!-- Corpo do modal -->
+    <div class="modal-body">
+      <p id="modalDescricao"></p>
+
+      <div class="modal-info-grid" id="modalInfoGrid"></div>
+    </div>
+
+    <!-- Rodapé do modal -->
+    <div class="modal-footer">
+      <button class="btn-modal-fechar" onclick="closeModal()">
+        <i class="fas fa-times"></i> Fechar
+      </button>
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Secretaria de Saúde - Guarapuava</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <!-- CSS separado -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"/>
+</head>
+
+<body>
+
+  {% include 'sections/navbar.html' %}
+  {% include 'sections/hero.html' %}
+  {% include 'sections/sobre.html' %}
+  {% include 'sections/servicos.html' %}
+  {% include 'sections/departamentos.html' %}
+  {% include 'sections/noticias.html' %}
+  {% include 'sections/contato.html' %}
+  {% include 'sections/footer.html' %}
+
+  <!-- JS separado -->
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+</body>
+</html>

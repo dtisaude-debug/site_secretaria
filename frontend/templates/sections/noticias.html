@@ -1,0 +1,98 @@
+<section id="noticias" class="noticias">
+  <div class="container">
+    <h2>Notícias</h2>
+
+    <div class="noticias-grid">
+
+      {% if noticias %}
+        {% for noticia in noticias %}
+        <div class="noticia-card" onclick="openNoticiaModal({{ loop.index0 }})">
+
+          {% if noticia.imagem %}
+            <img src="{{ noticia.imagem }}" alt="{{ noticia.titulo }}">
+          {% else %}
+            <div class="noticia-img-placeholder">
+              <i class="fas fa-newspaper"></i>
+            </div>
+          {% endif %}
+
+          <div class="noticia-card-body">
+            <span class="noticia-categoria">{{ noticia.categoria }}</span>
+            <h4>{{ noticia.titulo }}</h4>
+            <p>{{ noticia.resumo }}</p>
+            <div class="noticia-meta">
+              <small><i class="fas fa-calendar"></i> {{ noticia.data }}</small>
+              <small><i class="fas fa-user"></i> {{ noticia.autor }}</small>
+            </div>
+            <button class="btn-ler-mais">Ler mais</button>
+          </div>
+
+        </div>
+        {% endfor %}
+
+      {% else %}
+        {# Fallback se a API estiver fora ou sem notícias #}
+        <div class="noticia-card noticia-card--fallback">
+          <div class="noticia-img-placeholder">
+            <i class="fas fa-newspaper"></i>
+          </div>
+          <div class="noticia-card-body">
+            <h4>Ministério da Saúde adverte</h4>
+            <p>Notícia de primeira mão vinda do Ministério da Saúde.</p>
+          </div>
+        </div>
+        <div class="noticia-card noticia-card--fallback">
+          <div class="noticia-img-placeholder">
+            <i class="fas fa-file-medical"></i>
+          </div>
+          <div class="noticia-card-body">
+            <h4>Boletim oficial</h4>
+            <p>Descubra as novidades mais recentes e relevantes sobre saúde
+               com nosso boletim informativo.</p>
+          </div>
+        </div>
+      {% endif %}
+
+    </div>
+  </div>
+</section>
+
+{# ── Modal de Notícia ── #}
+<div id="noticiaModalOverlay" class="noticia-modal-overlay" onclick="closeNoticiaModal(event)">
+  <div class="noticia-modal">
+
+    {# Header #}
+    <div class="noticia-modal-header" id="noticiaModalHeader">
+      <div class="noticia-modal-header-info">
+        <span class="noticia-modal-categoria" id="noticiaModalCategoria"></span>
+        <h2 class="noticia-modal-titulo" id="noticiaModalTitulo"></h2>
+        <div class="noticia-modal-meta">
+          <small><i class="fas fa-calendar"></i> <span id="noticiaModalData"></span></small>
+          <small><i class="fas fa-user"></i> <span id="noticiaModalAutor"></span></small>
+        </div>
+      </div>
+      <button class="noticia-modal-close" onclick="closeNoticiaModal()">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+
+    {# Imagem #}
+    <div id="noticiaModalImagemWrap" class="noticia-modal-imagem-wrap"></div>
+
+    {# Corpo #}
+    <div class="noticia-modal-body">
+      <p id="noticiaModalResumo" class="noticia-modal-resumo"></p>
+    </div>
+
+    {# Conteúdo #}
+    <div class="noticia-modal-body">
+      <p id="noticiaModalConteudo" class="noticia-modal-conteudo"></p>
+    </div>
+
+  </div>
+</div>
+
+{# Dados das notícias para o JS #}
+<script id="noticiasData" type="application/json">
+  {{ noticias | tojson }}
+</script>
