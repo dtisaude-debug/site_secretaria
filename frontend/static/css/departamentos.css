@@ -113,11 +113,11 @@
   font-size: 3.5rem;
 }
 
-.dept-card.tfd    .dept-card-img { background: linear-gradient(135deg, #1a6fc4, #1a3f7a); color: #fff; }
-.dept-card.visa   .dept-card-img { background: linear-gradient(135deg, #7b2d8b, #5a1f6e); color: #fff; }
+.dept-card.dts    .dept-card-img { background: linear-gradient(135deg, #1a6fc4, #1a3f7a); color: #fff; }
+.dept-card.dvs   .dept-card-img { background: linear-gradient(135deg, #7b2d8b, #5a1f6e); color: #fff; }
 .dept-card.due    .dept-card-img { background: linear-gradient(135deg, #c0392b, #922b21); color: #fff; }
 .dept-card.das    .dept-card-img { background: linear-gradient(135deg, #1abc9c, #148f77); color: #fff; }
-.dept-card.caps   .dept-card-img { background: linear-gradient(135deg, #e67e22, #ca6f1e); color: #fff; }
+.dept-card.dasmc   .dept-card-img { background: linear-gradient(135deg, #e67e22, #ca6f1e); color: #fff; }
 .dept-card.draca .dept-card-img { background: linear-gradient(135deg, #2c3e50, #1a252f); color: #fff; }
 .dept-card.dgtes  .dept-card-img { background: linear-gradient(135deg, #27ae60, #1e8449); color: #fff; }
 .dept-card.dpgsus  .dept-card-img { background: linear-gradient(135deg, #2980b9, #1f618d); color: #fff; }
@@ -142,11 +142,11 @@
   font-weight: 800;
 }
 
-.dept-card.tfd    .dept-sigla { color: var(--yellow); }
-.dept-card.visa   .dept-sigla { color: #9b59b6; }
+.dept-card.dts    .dept-sigla { color: var(--yellow); }
+.dept-card.dvs   .dept-sigla { color: #9b59b6; }
 .dept-card.due    .dept-sigla { color: #c0392b; }
 .dept-card.das    .dept-sigla { color: var(--teal); }
-.dept-card.caps   .dept-sigla { color: #e67e22; }
+.dept-card.dasmc   .dept-sigla { color: #e67e22; }
 .dept-card.draca .dept-sigla { color: #2c3e50; }
 .dept-card.dgtes  .dept-sigla { color: #27ae60; }
 .dept-card.dpgsus  .dept-sigla { color: #2980b9; }
@@ -275,11 +275,11 @@
 }
 
 /* Cores do header por departamento */
-.modal-header.tfd    { background: linear-gradient(135deg, #1a6fc4, #1a3f7a); }
-.modal-header.visa   { background: linear-gradient(135deg, #7b2d8b, #5a1f6e); }
+.modal-header.dts    { background: linear-gradient(135deg, #1a6fc4, #1a3f7a); }
+.modal-header.dvs   { background: linear-gradient(135deg, #7b2d8b, #5a1f6e); }
 .modal-header.due    { background: linear-gradient(135deg, #c0392b, #922b21); }
 .modal-header.das    { background: linear-gradient(135deg, #1abc9c, #148f77); }
-.modal-header.caps   { background: linear-gradient(135deg, #e67e22, #ca6f1e); }
+.modal-header.dasmc   { background: linear-gradient(135deg, #e67e22, #ca6f1e); }
 .modal-header.draca { background: linear-gradient(135deg, #2c3e50, #1a252f); }
 .modal-header.dgtes  { background: linear-gradient(135deg, #27ae60, #1e8449); }
 .modal-header.dpgsus  { background: linear-gradient(135deg, #2980b9, #1f618d); }

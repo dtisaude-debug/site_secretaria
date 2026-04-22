@@ -205,27 +205,29 @@ if (track) {
    DADOS DOS DEPARTAMENTOS (modal)
 ============================================= */
 const deptData = {
-  tfd: {
-    sigla:      'TFD',
-    nome:       'Tratamento Fora do Domicílio',
+  dts: {
+    sigla:      'DTS',
+    nome:       'Departamento de Transporte Sanitario',
     icone:      'fas fa-ambulance',
-    descricao:  'O TFD garante o deslocamento de pacientes que precisam realizar tratamentos médicos em outros municípios ou estados, cubrindo despesas de transporte e hospedagem quando necessário.',
+    descricao:  'O dts garante o deslocamento de pacientes que precisam realizar tratamentos médicos em outros municípios ou estados.',
     infos: [
+      { icone: 'fa-solid fa-user',      titulo:'Responsável',   texto: 'Isaias Nogueira Leal'},
       { icone: 'fas fa-map-marker-alt', titulo: 'Atendimento',  texto: 'Pacientes do SUS que necessitam de tratamento fora do município' },
       { icone: 'fas fa-file-alt',       titulo: 'Documentos',   texto: 'Laudo médico, RG, CPF e Cartão SUS' },
-      { icone: 'fas fa-phone',          titulo: 'Contato',      texto: '(42) 3142-1567/3142-1568' },
+      { icone: 'fas fa-phone',          titulo: 'Contato',      texto: '(42) 3142-1517' },
       { icone: 'fas fa-clock',          titulo: 'Horário',      texto: 'Segunda a Sexta, das 08h00 às 17h00' },
     ]
   },
-  visa: {
-    sigla:      'VISA',
-    nome:       'Vigilância Sanitária',
+  dvs: {
+    sigla:      'DVS',
+    nome:       'Departamento de Vigilância em Saúde',
     icone:      'fas fa-search',
     descricao:  'A Vigilância Sanitária é responsável por proteger e promover a saúde da população, por meio do controle sanitário da produção e consumo de produtos, serviços e ambientes.',
     infos: [
+      { icone: 'fa-solid fa-user',      titulo:'Responsável',    texto: 'Marlene Terezinha Borecki'},
       { icone: 'fas fa-store',          titulo: 'Fiscalização',  texto: 'Estabelecimentos comerciais, alimentos e medicamentos' },
       { icone: 'fas fa-file-alt',       titulo: 'Alvarás',       texto: 'Emissão e renovação de alvarás sanitários' },
-      { icone: 'fas fa-phone',          titulo: 'Contato',       texto: '(42) 3142-1538' },
+      { icone: 'fas fa-phone',          titulo: 'Contato',       texto: '(42) 3142-1555' },
       { icone: 'fas fa-clock',          titulo: 'Horário',       texto: 'Segunda a Sexta, das 08h às 17h' },
     ]
   },
@@ -235,6 +237,7 @@ const deptData = {
     icone:      'fas fa-exclamation-triangle',
     descricao:  'O Departamento de Urgência e Emergência coordena e organiza os serviços de atendimento de urgência e emergência do município, garantindo atendimento rápido e eficaz à população.',
     infos: [
+      { icone: 'fa-solid fa-user',      titulo:'Responsável',    texto: 'Erika Mayumi Yassue'},
       { icone: 'fas fa-hospital',       titulo: 'Unidades',      texto: 'UPA 24h e Urgências municipal(Trianon e Primavera)' },
       { icone: 'fas fa-ambulance',      titulo: 'SAMU',          texto: 'Ligue 192 para emergências' },
       { icone: 'fas fa-phone',          titulo: 'Contato',       texto: '(42) 3142-1519' },
@@ -247,21 +250,22 @@ const deptData = {
     icone:      'fas fa-hands-helping',
     descricao:  'O DAS coordena as ações de atenção primária à saúde, incluindo as Unidades Básicas de Saúde (UBS), programas de saúde da família e ações preventivas voltadas à comunidade.',
     infos: [
+      { icone: 'fa-solid fa-user',      titulo:'Responsável',    texto: 'Hugo Vieira de Santana'},
       { icone: 'fas fa-clinic-medical', titulo: 'Unidades',      texto: 'Gestão das UBS de Guarapuava' },
       { icone: 'fas fa-user-md',        titulo: 'Programas',     texto: 'Saúde da Família, Hiperdia e outros' },
       { icone: 'fas fa-phone',          titulo: 'Contato',       texto: '(42) 3142-1523' },
       { icone: 'fas fa-clock',          titulo: 'Horário',       texto: 'Segunda a Sexta, das 08h às 17h' },
     ]
   },
-  caps: {
-    sigla:      'CAPS',
-    nome:       'Centro de Atenção Psicossocial',
+  dasmc: {
+    sigla:      'DASMC',
+    nome:       'Departamento de Atenção à Saúde da Mulher e da Criança',
     icone:      'fas fa-brain',
-    descricao:  'O CAPS oferece atendimento a pessoas com transtornos mentais graves e persistentes, além de dependência de álcool e outras drogas, com equipe multidisciplinar especializada.',
+    descricao:  'O DAS cuida do atendimento a mulheres e crianças de forma especilizada, a partir de programas que preservam a saude.',
     infos: [
-      { icone: 'fas fa-user-friends',   titulo: 'Público',       texto: 'Pessoas com transtornos mentais e dependência química' },
+      { icone: 'fas fa-user-friends',   titulo: 'Público',       texto: 'Mulheres e crianças que precisam de atenção a saude' },
       { icone: 'fas fa-heart',          titulo: 'Serviços',      texto: 'Consultas, grupos terapêuticos e oficinas' },
-      { icone: 'fas fa-phone',          titulo: 'Contato',       texto: 'AD: (42) 3142-1606 / II 3142-1603' },
+      { icone: 'fas fa-phone',          titulo: 'Contato',       texto: '(42) 3142-1577' },
       { icone: 'fas fa-clock',          titulo: 'Horário',       texto: 'Segunda a Sexta, das 08h às 17h' },
     ]
   },
@@ -271,6 +275,7 @@ const deptData = {
     icone:      'fas fa-book-medical',
     descricao:  'O DRACA atua para garantir que os recursos públicos da saúde sejam utilizados de forma transparente e que a população tenha acesso a serviços qualificados, por meio de regulação, auditoria e controle dos serviços de saúde.',
     infos: [
+      { icone: 'fa-solid fa-user',      titulo:'Responsável',    texto: 'Graziele Schumanski'},
       { icone: 'fas fa-industry',       titulo: 'Atuação',       texto: 'Público' },
       { icone: 'fas fa-file-medical',   titulo: 'Serviços',      texto: 'Perícias, notificações e ações preventivas' },
       { icone: 'fas fa-phone',          titulo: 'Contato',       texto: '(42) 3142-1560' },
@@ -283,10 +288,11 @@ const deptData = {
     icone:     'fas fa-chalkboard-teacher',
     descricao: 'O DGTES é responsável por planejar e coordenar as políticas de gestão de pessoas e educação permanente em saúde, promovendo a qualificação dos profissionais do SUS municipal.',
     infos: [
-      { icone: 'fas fa-users',        titulo: 'Público',    texto: 'Servidores e profissionais da saúde municipal' },
-      { icone: 'fas fa-graduation-cap', titulo: 'Programas', texto: 'Educação permanente, capacitações e residências' },
-      { icone: 'fas fa-phone',        titulo: 'Contato',    texto: '(42) 3142-1507' },
-      { icone: 'fas fa-clock',        titulo: 'Horário',    texto: 'Segunda a Sexta, das 08h às 17h' },
+      { icone: 'fa-solid fa-user',      titulo:'Responsável', texto: 'Carla Silverio'},
+      { icone: 'fas fa-users',          titulo: 'Público',    texto: 'Servidores e profissionais da saúde municipal' },
+      { icone: 'fas fa-graduation-cap', titulo: 'Programas',  texto: 'Educação permanente, capacitações e residências' },
+      { icone: 'fas fa-phone',          titulo: 'Contato',    texto: '(42) 3142-1507' },
+      { icone: 'fas fa-clock',          titulo: 'Horário',    texto: 'Segunda a Sexta, das 08h às 17h' },
     ]
   },
   dpgsus: {
@@ -295,6 +301,7 @@ const deptData = {
     icone:     'fas fa-chart-line',
     descricao: 'O DPGSUS coordena o planejamento estratégico e o gerenciamento dos recursos do SUS no município, garantindo o uso eficiente das verbas e o cumprimento das metas de saúde pública.',
     infos: [
+      { icone: 'fa-solid fa-user',    titulo:'Responsável', texto: 'Adriana Alves'},
       { icone: 'fas fa-chart-bar',    titulo: 'Função',     texto: 'Planejamento, monitoramento e avaliação do SUS' },
       { icone: 'fas fa-file-alt',     titulo: 'Relatórios', texto: 'RAG, PMS e prestações de contas' },
       { icone: 'fas fa-phone',        titulo: 'Contato',    texto: '(42) 3142-1533' },
@@ -307,6 +314,7 @@ const deptData = {
     icone:     'fas fa-building',
     descricao: 'O DACS é responsável por gerenciar a administração, compras e serviços da saúde, garantindo a eficiência e transparência nas operações.',
     infos: [
+      { icone: 'fa-solid fa-user',    titulo:'Responsável', texto: 'Maria Izabel'},
       { icone: 'fas fa-tasks',        titulo: 'Função',     texto: 'Administração, compras e serviços' },
       { icone: 'fas fa-file-invoice', titulo: 'Serviços',   texto: 'Fornecimento de materiais e equipamentos' },
       { icone: 'fas fa-phone',        titulo: 'Contato',    texto: '(42) 3142-1529 / 3142-1530' },
