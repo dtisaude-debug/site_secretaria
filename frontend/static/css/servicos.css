@@ -54,8 +54,9 @@
 
 .servico-item span {
   font-size: 0.90rem;
-  font-weight: 600;
+  font-weight: 700;
   color: var(--white);
   text-align: center;
-  max-width: 80px;
+  line-height: 1.4;
+  max-width: 120px;
 }
