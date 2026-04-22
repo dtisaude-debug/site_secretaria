@@ -260,7 +260,7 @@ const deptData = {
   dasmc: {
     sigla:      'DASMC',
     nome:       'Departamento de Atenção à Saúde da Mulher e da Criança',
-    icone:      'fas fa-brain',
+    icone:      'fa-solid fa-person-pregnant',
     descricao:  'O DAS cuida do atendimento a mulheres e crianças de forma especilizada, a partir de programas que preservam a saude.',
     infos: [
       { icone: 'fas fa-user-friends',   titulo: 'Público',       texto: 'Mulheres e crianças que precisam de atenção a saude' },
