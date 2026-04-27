@@ -443,3 +443,22 @@ document.addEventListener('keydown', (e) => {
     }
   }
 });
+
+
+/* =============================================
+   FAQ — Acordeão 
+============================================= */
+function toggleFaq(btn) {
+  const item = btn.closest('.faq-item');
+  const isOpen = item.classList.contains('open');
+
+  // Fecha todos os itens abertos
+  document.querySelectorAll('.faq-item.open').forEach(el => {
+    el.classList.remove('open');
+  });
+
+  // Abre o clicado (se não estava aberto)
+  if (!isOpen) {
+    item.classList.add('open');
+  }
+}

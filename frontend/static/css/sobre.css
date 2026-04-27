@@ -35,6 +35,14 @@
   margin-bottom: 14px;
 }
 
+.secretario {
+  font-size: 1.09rem;
+  font-weight: 700;
+  color: var(--text-grey);
+  margin-bottom: 14px;
+  text-indent: 10px;
+}
+
 /* Lista de valores */
 .valores-lista li {
   font-size: 0.88rem;
