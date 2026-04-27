@@ -263,6 +263,7 @@ const deptData = {
     icone:      'fa-solid fa-person-pregnant',
     descricao:  'O DAS cuida do atendimento a mulheres e crianças de forma especilizada, a partir de programas que preservam a saude.',
     infos: [
+      { icone: 'fa-solid fa-user',      titulo:'Responsável',    texto: 'Andresa Cristiane Sansana Leandro'},
       { icone: 'fas fa-user-friends',   titulo: 'Público',       texto: 'Mulheres e crianças que precisam de atenção a saude' },
       { icone: 'fas fa-heart',          titulo: 'Serviços',      texto: 'Consultas, grupos terapêuticos e oficinas' },
       { icone: 'fas fa-phone',          titulo: 'Contato',       texto: '(42) 3142-1577' },
