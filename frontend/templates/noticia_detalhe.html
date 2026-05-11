@@ -10,11 +10,23 @@
         href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 
-<body>
+<body style="background-color: var(--navy);">
 
   {% include 'sections/navbar.html' %}
 
-  <section class="noticia-hero">
+  <section
+    class="noticia-hero"
+    {% if noticia.imagem %}
+    style="
+        background:
+        linear-gradient(
+            rgba(88, 88, 88, 0.096),
+            rgba(77, 77, 77, 0.103)
+        ),
+        url('{{ noticia.imagem }}') center/cover;
+    "
+    {% endif %}
+    >
 
     <div class="container noticia-container">
 
@@ -52,7 +64,7 @@
   </section>
 
   {% if noticia.imagem %}
-  <section class="noticia-banner">
+  <!-- <section class="noticia-banner">
     <div class="container noticia-container">
 
       <img
@@ -62,7 +74,7 @@
       >
 
     </div>
-  </section>
+  </section> -->
   {% endif %}
 
   <section class="noticia-content-section">

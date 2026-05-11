@@ -1,18 +1,18 @@
 /* =========================================
    PÁGINA DE NOTÍCIA
 ========================================= */
-
 .noticia-container{
-  max-width: 900px;
+  max-width: 1200px;
 }
 
 .noticia-hero{
-  padding: 140px 0 60px;
+  padding: 180px 0 120px;
+  position: relative;
   background:
     linear-gradient(
       135deg,
-      rgba(0,119,182,.06),
-      rgba(0,180,216,.03)
+      rgba(3, 105, 160, 0.144),
+      rgba(0, 64, 77, 0.171)
     );
 }
 
@@ -115,14 +115,27 @@
 }
 
 .noticia-texto{
-  font-size: 1.08rem;
-  line-height: 2;
-
+  font-size: 1.12rem;
+  line-height: 2.1;
+  white-space: pre-line;
   color: #374151;
 }
 
 .noticia-texto p{
-  margin-bottom: 28px;
+  margin-bottom: 32px;
+}
+
+.noticia-texto::first-letter{
+  font-size: 2.3rem;
+  font-weight: 800;
+
+  float: left;
+
+  line-height: 1;
+
+  margin-right: 5px;
+
+  color: var(--primary);
 }
 
 .noticia-texto h2,
