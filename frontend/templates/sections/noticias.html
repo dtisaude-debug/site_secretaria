@@ -6,7 +6,9 @@
 
       {% if noticias %}
         {% for noticia in noticias %}
-        <div class="noticia-card" onclick="openNoticiaModal({{ loop.index0 }})">
+        <a href="/noticia/{{ noticia.id }}"
+          class="noticia-card"
+          target="_blank">
 
           {% if noticia.imagem %}
             <img src="{{ noticia.imagem }}" alt="{{ noticia.titulo }}">
@@ -27,7 +29,7 @@
             <button class="btn-ler-mais">Ler mais</button>
           </div>
 
-        </div>
+        </a>
         {% endfor %}
 
       {% else %}

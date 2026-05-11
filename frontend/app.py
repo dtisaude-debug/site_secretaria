@@ -3,7 +3,7 @@ import requests
 import bleach
 from datetime import datetime
 from waitress import serve
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, render_template, request, jsonify, abort
 from flask_mail import Mail, Message
 from flask_wtf.csrf import CSRFProtect
 from dotenv import load_dotenv
@@ -58,6 +58,26 @@ def buscar_noticias() -> list:
 # =============================================
 # Rotas
 # =============================================
+
+@app.route('/noticia/<int:id>')
+def noticia_detalhe(id):
+
+    noticias = buscar_noticias()
+
+    noticia = next(
+        (n for n in noticias if n['id'] == id),
+        None
+    )
+
+    if not noticia:
+        abort(404)
+
+    return render_template(
+        'noticia_detalhe.html',
+        noticia=noticia
+    )
+
+
 
 @app.route('/')
 def index():

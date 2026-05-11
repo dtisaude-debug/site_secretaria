@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>{{ noticia.titulo }}</title>
+
+  <link rel="stylesheet"
+        href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+  {% include 'sections/navbar.html' %}
+
+  <section class="noticia-hero">
+
+    <div class="container noticia-container">
+
+      <a href="/#noticias" class="noticia-voltar">
+        <i class="fas fa-arrow-left"></i>
+        Voltar para notícias
+      </a>
+
+      <span class="noticia-badge">
+        {{ noticia.categoria }}
+      </span>
+
+      <h1 class="noticia-titulo">
+        {{ noticia.titulo }}
+      </h1>
+
+      <p class="noticia-subtitulo">
+        {{ noticia.resumo }}
+      </p>
+
+      <div class="noticia-meta">
+        <div class="noticia-meta-item">
+          <i class="fas fa-calendar"></i>
+          <span>{{ noticia.data }}</span>
+        </div>
+
+        <div class="noticia-meta-item">
+          <i class="fas fa-user"></i>
+          <span>{{ noticia.autor }}</span>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+  {% if noticia.imagem %}
+  <section class="noticia-banner">
+    <div class="container noticia-container">
+
+      <img
+        src="{{ noticia.imagem }}"
+        alt="{{ noticia.titulo }}"
+        class="noticia-imagem"
+      >
+
+    </div>
+  </section>
+  {% endif %}
+
+  <section class="noticia-content-section">
+
+    <div class="container noticia-container">
+
+      <article class="noticia-content">
+
+        <div class="noticia-texto">
+          {{ noticia.conteudo }}
+        </div>
+
+      </article>
+
+    </div>
+
+  </section>
+
+  {% include 'sections/footer.html' %}
+
+</body>
+</html>

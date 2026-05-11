@@ -11,4 +11,6 @@ background: linear-gradient(135deg, var(--yellow) 0%, #f0b429 100%);
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
+  padding-left: 10%;
+  padding-top: 1%;
 }
