@@ -300,9 +300,9 @@ const deptData = {
     sigla:     'DPGSUS',
     nome:      'Departamento de Planejamento e Gerenciamento do SUS',
     icone:     'fas fa-chart-line',
-    descricao: 'O DPGSUS coordena o planejamento estratégico e o gerenciamento dos recursos do SUS no município, garantindo o uso eficiente das verbas e o cumprimento das metas de saúde pública.',
+    descricao: 'O DPGSUS coordena o processo de planejamento estratégico, orçamentário e institucional da Secretaria Municipal de Saúde, garantindo a convergência entre as metas assistenciais e a disponibilidade de recursos, bem como a conformidade com os instrumentos de gestão do SUS (Plano Municipal de Saúde, Programação Anual e Relatório Detalhado do Quadrimestre Anterior - RDQA).',
     infos: [
-      { icone: 'fa-solid fa-user',    titulo:'Responsável', texto: 'Adriana Alves'},
+      { icone: 'fa-solid fa-user',    titulo:'Responsável', texto: 'Adriana Vaz Alves'},
       { icone: 'fas fa-chart-bar',    titulo: 'Função',     texto: 'Planejamento, monitoramento e avaliação do SUS' },
       { icone: 'fas fa-file-alt',     titulo: 'Relatórios', texto: 'RAG, PMS e prestações de contas' },
       { icone: 'fas fa-phone',        titulo: 'Contato',    texto: '(42) 3142-1533' },

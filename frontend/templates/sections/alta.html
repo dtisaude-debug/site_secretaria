@@ -1,55 +1,52 @@
 <section class="alta">
-    <div class="container">
-        <h2>Em Alta</h2>
+  <div class="container">
+
+    <div class="alta-header">
+      <h2>Em Alta</h2>
     </div>
+
     <div class="alta-grid">
-        <!-- Conteúdo da seção "Em Alta" -->
-         {% if noticias %}
-        {% for noticia in noticias %}
-        <div class="noticia-card" onclick="openNoticiaModal({{ loop.index0 }})">
+
+      {% for noticia in noticias[:4] %}
+      <article class="alta-card" onclick="openNoticiaModal({{ loop.index0 }})">
+
+        <div class="alta-image-wrapper">
 
           {% if noticia.imagem %}
-            <img src="{{ noticia.imagem }}" alt="{{ noticia.titulo }}">
+            <img
+              src="{{ noticia.imagem }}"
+              alt="{{ noticia.titulo }}"
+              class="alta-image"
+            >
           {% else %}
-            <div class="noticia-img-placeholder">
+            <div class="alta-image-placeholder">
               <i class="fas fa-newspaper"></i>
             </div>
           {% endif %}
 
-          <div class="noticia-card-body">
-            <span class="noticia-categoria">{{ noticia.categoria }}</span>
-            <h4>{{ noticia.titulo }}</h4>
-            <p>{{ noticia.resumo }}</p>
-            <div class="noticia-meta">
-              <small><i class="fas fa-calendar"></i> {{ noticia.data }}</small>
-              <small><i class="fas fa-user"></i> {{ noticia.autor }}</small>
-            </div>
-            <button class="btn-ler-mais">Ler mais</button>
+          <span class="alta-dot"></span>
+        </div>
+
+        <div class="alta-content">
+
+          <span class="alta-categoria">
+            {{ noticia.categoria }}
+          </span>
+
+          <h3 class="alta-titulo">
+            {{ noticia.titulo }}
+          </h3>
+
+          <div class="alta-meta">
+            <i class="fas fa-calendar-alt"></i>
+            <span>{{ noticia.data }}</span>
           </div>
 
         </div>
-        {% endfor %}
 
-      {% else %}
-        {# Fallback se a API estiver fora ou sem notícias #}
-        <div class="noticia-card noticia-card--fallback">
-          <div class="noticia-img-placeholder">
-            <i class="fas fa-newspaper"></i>
-          </div>
-          <div class="noticia-card-body">
-            <h4>Campanha de vacinação contra influenza</h4>
-            <p>Inicio entre 15 e 30 de junho.</p>
-          </div>
-        </div>
-        <div class="noticia-card noticia-card--fallback">
-          <div class="noticia-img-placeholder">
-            <i class="fas fa-file-medical"></i>
-          </div>
-          <div class="noticia-card-body">
-            <h4>Campanha contra tabagismo</h4>
-            <p>Conscientização sobre os riscos do tabagismo e apoio para quem deseja parar de fumar.</p>
-          </div>
-        </div>
-      {% endif %}
+      </article>
+      {% endfor %}
+
     </div>
+  </div>
 </section>
