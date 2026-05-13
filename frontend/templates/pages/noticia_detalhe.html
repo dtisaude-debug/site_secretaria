@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>{{ noticia.titulo }}</title>
+
+  <link rel="stylesheet"
+        href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body class="noticia-page">
+
+  {% include 'sections/navbar.html' %}
+
+  <section class="noticia-topo">
+
+    <div class="container noticia-layout">
+
+      <!-- CONTEÚDO PRINCIPAL -->
+      <main class="noticia-main">
+
+        <a href="/#noticias" class="noticia-voltar">
+          <i class="fas fa-arrow-left"></i>
+          Voltar para notícias
+        </a>
+
+        <span class="noticia-badge">
+          {{ noticia.categoria }}
+        </span>
+
+        <h1 class="noticia-titulo">
+          {{ noticia.titulo }}
+        </h1>
+
+        <p class="noticia-subtitulo">
+          {{ noticia.resumo }}
+        </p>
+
+        <div class="noticia-meta">
+          <div class="noticia-meta-item">
+            <i class="fas fa-calendar"></i>
+            <span>{{ noticia.data }}</span>
+          </div>
+
+          <div class="noticia-meta-item">
+            <i class="fas fa-user"></i>
+            <span>{{ noticia.autor }}</span>
+          </div>
+        </div>
+
+        {% if noticia.imagem %}
+        <div class="noticia-banner">
+          <img
+            src="{{ noticia.imagem }}"
+            alt="{{ noticia.titulo }}"
+            class="noticia-imagem"
+          >
+        </div>
+        {% endif %}
+
+        <article class="noticia-content">
+          <div class="noticia-texto">
+            {{ noticia.conteudo }}
+          </div>
+        </article>
+
+      </main>
+
+      <!-- SIDEBAR -->
+      <aside class="noticia-sidebar">
+
+        <h3 class="sidebar-titulo">
+          Mais Lidas
+        </h3>
+
+        <div class="sidebar-lista">
+
+          {% for item in noticias_populares %}
+
+          <a
+            href="/noticia/{{ item.slug }}"
+            class="sidebar-card"
+          >
+
+            <img
+              src="{{ item.imagem }}"
+              alt="{{ item.titulo }}"
+            >
+
+            <div class="sidebar-info">
+              <h4>{{ item.titulo }}</h4>
+            </div>
+
+          </a>
+
+          {% endfor %}
+
+        </div>
+
+      </aside>
+
+    </div>
+
+  </section>
+
+  {% include 'sections/footer.html' %}
+
+</body>
+</html>

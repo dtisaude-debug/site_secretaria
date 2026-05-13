@@ -73,7 +73,7 @@ def noticia_detalhe(id):
         abort(404)
 
     return render_template(
-        'noticia_detalhe.html',
+        'pages/noticia_detalhe.html',
         noticia=noticia
     )
 

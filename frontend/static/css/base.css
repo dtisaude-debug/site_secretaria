@@ -18,6 +18,9 @@
   --light-gray: #f5f6fa;
   --text-dark:  #1a1a2e;
   --text-gray:  #555;
+  --red:        #c62828;
+  --dark-red:   #b71c1c;
+  --blue-logo:  #2761ae;
 }
 
 html { scroll-behavior: smooth; }

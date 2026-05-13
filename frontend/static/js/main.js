@@ -237,7 +237,7 @@ const deptData = {
     icone:      'fas fa-exclamation-triangle',
     descricao:  'O Departamento de Urgência e Emergência coordena e organiza os serviços de atendimento de urgência e emergência do município, garantindo atendimento rápido e eficaz à população.',
     infos: [
-      { icone: 'fa-solid fa-user',      titulo:'Responsável',    texto: 'Erika Mayumi Yassue'},
+      { icone: 'fa-solid fa-user',      titulo:'Responsável',    texto: 'Chayane Andrade'},
       { icone: 'fas fa-hospital',       titulo: 'Unidades',      texto: 'UPA 24h e Urgências municipal(Trianon e Primavera)' },
       { icone: 'fas fa-ambulance',      titulo: 'SAMU',          texto: 'Ligue 192 para emergências' },
       { icone: 'fas fa-phone',          titulo: 'Contato',       texto: '(42) 3142-1519' },
@@ -315,7 +315,7 @@ const deptData = {
     icone:     'fas fa-building',
     descricao: 'O DACS é responsável por gerenciar a administração, compras e serviços da saúde, garantindo a eficiência e transparência nas operações.',
     infos: [
-      { icone: 'fa-solid fa-user',    titulo:'Responsável', texto: 'Maria Izabel'},
+      { icone: 'fa-solid fa-user',    titulo:'Responsável', texto: 'Maria Izabel Bassani'},
       { icone: 'fas fa-tasks',        titulo: 'Função',     texto: 'Administração, compras e serviços' },
       { icone: 'fas fa-file-invoice', titulo: 'Serviços',   texto: 'Fornecimento de materiais e equipamentos' },
       { icone: 'fas fa-phone',        titulo: 'Contato',    texto: '(42) 3142-1529 / 3142-1530' },
