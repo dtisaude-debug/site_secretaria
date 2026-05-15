@@ -1,0 +1,46 @@
+/* =============================================
+   Variáveis globais - adicione cores diretamentes aqui, fontes, etc.
+============================================= */
+:root {
+  --navy:       #0d2b5e;
+  --navy-light: #1a3f7a;
+
+  --teal:       #1abc9c;
+  --teal-dark:  #17a589;
+
+  --yellow:     #f5a623;
+  --orange:     #e07b1a;
+
+  --white:      #ffffff;
+  --light-gray: #f5f6fa;
+
+  --text-dark:  #1a1a2e;
+  --text-gray:  #555;
+
+  --red:        #c62828;
+  --dark-red:   #b71c1c;
+
+  --blue-logo:  #2761ae;
+
+  --font-primary: 'Poppins', sans-serif;
+
+  --container-width: 1600px;
+
+  --radius-sm: 10px;
+  --radius-md: 20px;
+  --radius-lg: 30px;
+
+
+  --shadow-sm:
+    0 2px 8px rgba(0,0,0,.05);
+
+  --shadow-md:
+    0 10px 30px rgba(0,0,0,.08);
+
+  --shadow-lg:
+    0 20px 50px rgba(0,0,0,.12);
+
+
+  --transition-fast: .2s ease;
+  --transition-normal: .3s ease;
+}

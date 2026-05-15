@@ -2,36 +2,49 @@
   <div class="container">
     <h2>Notícias</h2>
 
-    <div class="noticias-grid">
+    <div class="noticias-wrapper">
 
-      {% if noticias %}
-        {% for noticia in noticias %}
-        <a href="/noticia/{{ noticia.id }}"
-          class="noticia-card"
-          target="_blank">
+      <button class="carousel-btn prev" id="noticiasPrev">
+        <i class="fas fa-chevron-left"></i>
+      </button>
 
-          {% if noticia.imagem %}
-            <img src="{{ noticia.imagem }}" alt="{{ noticia.titulo }}">
-          {% else %}
-            <div class="noticia-img-placeholder">
-              <i class="fas fa-newspaper"></i>
+      <div class="noticias-carousel" id="noticiasCarousel">
+
+        {% if noticias %}
+          {% for noticia in noticias %}
+          <a href="/noticia/{{ noticia.id }}"
+            class="noticia-card"
+            target="_blank">
+
+            {% if noticia.imagem %}
+              <img src="{{ noticia.imagem }}" alt="{{ noticia.titulo }}">
+            {% else %}
+              <div class="noticia-img-placeholder">
+                <i class="fas fa-newspaper"></i>
+              </div>
+            {% endif %}
+
+            <div class="noticia-card-body">
+              <span class="noticia-categoria">{{ noticia.categoria }}</span>
+              <h4>{{ noticia.titulo }}</h4>
+              <p>{{ noticia.resumo }}</p>
+              <div class="noticia-meta">
+                <small><i class="fas fa-calendar"></i> {{ noticia.data }}</small>
+                <small><i class="fas fa-user"></i> {{ noticia.autor }}</small>
+              </div>
+              <button class="btn-ler-mais">Ler mais</button>
             </div>
-          {% endif %}
 
-          <div class="noticia-card-body">
-            <span class="noticia-categoria">{{ noticia.categoria }}</span>
-            <h4>{{ noticia.titulo }}</h4>
-            <p>{{ noticia.resumo }}</p>
-            <div class="noticia-meta">
-              <small><i class="fas fa-calendar"></i> {{ noticia.data }}</small>
-              <small><i class="fas fa-user"></i> {{ noticia.autor }}</small>
-            </div>
-            <button class="btn-ler-mais">Ler mais</button>
-          </div>
+          </a>
 
-        </a>
-        {% endfor %}
+          {% endfor %}
+        </div>
 
+        <button class="carousel-btn next" id="noticiasNext">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+
+      </div>
       {% else %}
         {# Fallback se a API estiver fora ou sem notícias #}
         <div class="noticia-card noticia-card--fallback">

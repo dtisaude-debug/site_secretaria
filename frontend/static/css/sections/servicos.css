@@ -50,7 +50,11 @@
 }
 
 .servico-item:hover .servico-icon {
-  background: rgba(255,255,255,0.35);
+  background: var(--yellow);
+}
+
+.servico-item:hover span {
+  color: var(--yellow);
 }
 
 .servico-item span {

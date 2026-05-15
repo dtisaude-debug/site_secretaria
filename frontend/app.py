@@ -58,6 +58,8 @@ def buscar_noticias() -> list:
 # =============================================
 # Rotas
 # =============================================
+ 
+
 
 @app.route('/noticia/<int:id>')
 def noticia_detalhe(id):
@@ -82,9 +84,16 @@ def noticia_detalhe(id):
 @app.route('/')
 def index():
     noticias = buscar_noticias()             
-    return render_template('index.html',
+    return render_template('pages/home.html',
                            noticias=noticias,           
                            ano=datetime.now().year)     
+
+@app.route('/noticias')
+def noticias():
+    noticias = buscar_noticias()             
+    return render_template(
+        'pages/noticias.html',
+        noticias=noticias)   
 
 
 @app.route('/enviar-contato', methods=['POST'])

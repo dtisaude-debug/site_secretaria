@@ -1,0 +1,49 @@
+/* =============================================
+   Reset
+============================================= */
+
+*, *::before, *::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =============================================
+   Base
+============================================= */
+
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  font-family: var(--font-primary);
+
+  color: var(--text-dark);
+  background: var(--white);
+
+  overflow-x: hidden;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+ul{
+  list-style: none;
+}
+
+img{
+  max-width: 100%;
+  display: block;
+}
+
+/* =============================================
+   Container
+============================================= */
+
+.container{
+  width: min(90%, var(--container-width));
+  margin: 0 auto;
+}

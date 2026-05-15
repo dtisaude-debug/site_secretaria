@@ -4,16 +4,17 @@
    Sempre que for criar um novo arquivo CSS, importe aqui para garantir que ele seja carregado.
 ============================================= */
 
-@import url('base.css');
-@import url('navbar.css');
-@import url('hero.css');
-@import url('alta.css');
-@import url('sobre.css');
-@import url('servicos.css');
-@import url('departamentos.css');
-@import url('noticias.css');
-@import url('noticias_template.css');
+@import url('global/base.css');
+@import url('global/variables.css');
+@import url('global/responsive.css');
+@import url('layouts/navbar.css');
+@import url('layouts/footer.css');
+@import url('sections/hero.css');
+@import url('sections/alta.css');
+@import url('sections/sobre.css');
+@import url('sections/servicos.css');
+@import url('sections/departamentos.css');
+@import url('sections/noticias.css');
+@import url('pages/noticias_template.css');
 /* @import url('contato.css'); */
-@import url('faq.css');
-@import url('footer.css');
-@import url('responsive.css');
+@import url('sections/faq.css');

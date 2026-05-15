@@ -72,15 +72,44 @@
       <aside class="noticia-sidebar">
 
         <h3 class="sidebar-titulo">
-          Mais Lidas
+          Ultimas notícias
         </h3>
 
+        {% for noticia in noticias %}
         <div class="sidebar-lista">
+            <a href="/noticia/{{ noticia.id }}"
+          class="noticia-card"
+          target="_blank">
 
-          {% for item in noticias_populares %}
+          {% if noticia.imagem %}
+            <img src="{{ noticia.imagem }}" alt="{{ noticia.titulo }}">
+          {% else %}
+            <div class="noticia-img-placeholder">
+              <i class="fas fa-newspaper"></i>
+            </div>
+          {% endif %}
 
+          <div class="noticia-card-body">
+            <span class="noticia-categoria">{{ noticia.categoria }}</span>
+            <h4>{{ noticia.titulo }}</h4>
+            <p>{{ noticia.resumo }}</p>
+            <div class="noticia-meta">
+              <small><i class="fas fa-calendar"></i> {{ noticia.data }}</small>
+              <small><i class="fas fa-user"></i> {{ noticia.autor }}</small>
+            </div>
+            <button class="btn-ler-mais">Ler mais</button>
+          </div>
+
+        </a>
+        </div>
+        {% endfor %}
+        <!-- <div class="sidebar-lista">
+          
+          {% if noticias%}
+          {% for item in noticias[:2] %}
+          
           <a
-            href="/noticia/{{ item.slug }}"
+            href="/noticia/{{ item.id }}"
             class="sidebar-card"
           >
 
@@ -96,8 +125,8 @@
           </a>
 
           {% endfor %}
-
-        </div>
+          {% endif %}
+        </div> -->
 
       </aside>
 

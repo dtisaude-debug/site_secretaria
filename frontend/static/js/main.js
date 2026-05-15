@@ -425,6 +425,15 @@ function openNoticiaModal(index) {
   document.body.style.overflow = 'hidden';
 }
 
+// function pegarCamapanha(index) {
+//   // Implementação da função
+//   const noticia = noticiasCache[index];
+//   if (noticia.categoria === 'Campanha') {
+//     // listo as campanhas para sessão em alta, para visualização e acesso rápido
+//     const campanhasWrap = document.getElementById('campanhasWrap');
+//   }
+// }
+
 function closeNoticiaModal(event) {
   // Fecha se clicou no overlay ou no botão fechar
   if (event && event.target !== document.getElementById('noticiaModalOverlay')) return;
@@ -444,6 +453,33 @@ document.addEventListener('keydown', (e) => {
     }
   }
 });
+
+/* Carousel de notícias (na página de notícias) */
+const carousel = document.getElementById('noticiasCarousel')
+
+const prevBtn = document.getElementById('noticiasPrev')
+const nextBtn = document.getElementById('noticiasNext')
+
+if(carousel){
+
+  const scrollAmount = 340
+
+  nextBtn?.addEventListener('click', () => {
+    carousel.scrollBy({
+      left: scrollAmount,
+      behavior: 'smooth'
+    })
+  })
+
+  prevBtn?.addEventListener('click', () => {
+    carousel.scrollBy({
+      left: -scrollAmount,
+      behavior: 'smooth'
+    })
+  })
+
+}
+
 
 
 /* =============================================

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>Notícias - Secretaria de Saúde</title>
+
+  <link rel="stylesheet"
+        href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body class="noticia-page">
+
+  {% include 'sections/navbar.html' %}
+
+   <section id="noticias" class="noticias">
+    <div class="container">
+        <h2>Notícias - Todas publicadas</h2>
+
+        <div class="noticias-grid">
+
+        {% if noticias %}
+            {% for noticia in noticias %}
+            <a href="/noticia/{{ noticia.id }}"
+            class="noticia-card"
+            target="_blank">
+
+            {% if noticia.imagem %}
+                <img src="{{ noticia.imagem }}" alt="{{ noticia.titulo }}">
+            {% else %}
+                <div class="noticia-img-placeholder">
+                <i class="fas fa-newspaper"></i>
+                </div>
+            {% endif %}
+
+            <div class="noticia-card-body">
+                <span class="noticia-categoria">{{ noticia.categoria }}</span>
+                <h4>{{ noticia.titulo }}</h4>
+                <p>{{ noticia.resumo }}</p>
+                <div class="noticia-meta">
+                <small><i class="fas fa-calendar"></i> {{ noticia.data }}</small>
+                <small><i class="fas fa-user"></i> {{ noticia.autor }}</small>
+                </div>
+                <button class="btn-ler-mais">Ler mais</button>
+            </div>
+
+            </a>
+            {% endfor %}
+
+        {% else %}
+            {# Fallback se a API estiver fora ou sem notícias #}
+            <div class="noticia-card noticia-card--fallback">
+            <div class="noticia-img-placeholder">
+                <i class="fas fa-newspaper"></i>
+            </div>
+            <div class="noticia-card-body">
+                <h4>Ministério da Saúde adverte</h4>
+                <p>Notícia de primeira mão vinda do Ministério da Saúde.</p>
+            </div>
+            </div>
+            <div class="noticia-card noticia-card--fallback">
+            <div class="noticia-img-placeholder">
+                <i class="fas fa-file-medical"></i>
+            </div>
+            <div class="noticia-card-body">
+                <h4>Boletim oficial</h4>
+                <p>Descubra as novidades mais recentes e relevantes sobre saúde
+                com nosso boletim informativo.</p>
+            </div>
+            </div>
+        {% endif %}
+
+        </div>
+    </div>
+    </section>
+
+  {% include 'sections/footer.html' %}
+
+</body>
+</html>

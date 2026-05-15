@@ -6,8 +6,9 @@
     </div>
 
     <div class="alta-grid">
-
       {% for noticia in noticias[:4] %}
+      
+      {% if noticia.categoria == 'Campanhas' %}
       <article class="alta-card" onclick="openNoticiaModal({{ loop.index0 }})">
 
         <div class="alta-image-wrapper">
@@ -45,6 +46,7 @@
         </div>
 
       </article>
+      {% endif %}
       {% endfor %}
 
     </div>
