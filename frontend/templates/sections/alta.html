@@ -9,7 +9,9 @@
       {% for noticia in noticias[:4] %}
       
       {% if noticia.categoria == 'Campanhas' %}
-      <article class="alta-card" onclick="openNoticiaModal({{ loop.index0 }})">
+      <a href="{{ url_for('noticia_detalhe', id=noticia.id) }}"
+         class="alta-card"
+         target="_blank">
 
         <div class="alta-image-wrapper">
 
@@ -45,7 +47,7 @@
 
         </div>
 
-      </article>
+      </a>
       {% endif %}
       {% endfor %}
 

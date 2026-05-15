@@ -10,21 +10,61 @@
         href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 
-<body class="noticia-page">
+<body class="noticias-page">
 
   {% include 'sections/navbar.html' %}
 
-   <section id="noticias" class="noticias">
-    <div class="container">
-        <h2>Notícias - Todas publicadas</h2>
+  <!-- HERO -->
+  <section class="noticias-hero">
 
-        <div class="noticias-grid">
+        <div class="container">
+
+    <a href="{{ url_for('index') }}"
+        class="btn-voltar-portal">
+
+        <i class="fas fa-arrow-left"></i>
+
+        Voltar ao portal
+
+    </a>
+
+    </div>
+
+    <div class="container">
+
+      <span class="noticias-badge">
+        Portal de Notícias
+      </span>
+
+      <h1>
+        Notícias e atualizações
+        da Secretaria de Saúde
+      </h1>
+
+      <p>
+        Acompanhe campanhas, avisos,
+        eventos e comunicados oficiais.
+      </p>
+
+    </div>
+
+  </section>
+
+  <!-- LISTAGEM -->
+  <section class="noticias-listagem">
+
+    <div class="container">
+
+      <div class="noticias-grid">
 
         {% if noticias %}
-            {% for noticia in noticias %}
-            <a href="/noticia/{{ noticia.id }}"
+
+          {% for noticia in noticias %}
+
+          <a
+            href="{{ url_for('noticia_detalhe', id=noticia.id) }}"
             class="noticia-card"
-            target="_blank">
+          >
 
             {% if noticia.imagem %}
                 <img src="{{ noticia.imagem }}" alt="{{ noticia.titulo }}">
