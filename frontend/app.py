@@ -60,7 +60,6 @@ def buscar_noticias() -> list:
 # =============================================
  
 
-
 @app.route('/noticia/<int:id>')
 def noticia_detalhe(id):
 
@@ -76,9 +75,9 @@ def noticia_detalhe(id):
 
     return render_template(
         'pages/noticia_detalhe.html',
-        noticia=noticia
+        noticia=noticia,
+        noticias=noticias
     )
-
 
 
 @app.route('/')

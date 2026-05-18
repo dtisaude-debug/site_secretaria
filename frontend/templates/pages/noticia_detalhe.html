@@ -20,15 +20,16 @@
 
       <!-- CONTEÚDO PRINCIPAL -->
       <main class="noticia-main">
+        <div class="noticia-header">
+          <a href="/#noticias" class="noticia-voltar">
+            <i class="fas fa-arrow-left"></i>
+            Voltar para notícias
+          </a>
 
-        <a href="/#noticias" class="noticia-voltar">
-          <i class="fas fa-arrow-left"></i>
-          Voltar para notícias
-        </a>
-
-        <span class="noticia-badge">
-          {{ noticia.categoria }}
-        </span>
+          <span class="noticia-badge">
+            Categoria: {{ noticia.categoria }}
+          </span>
+        </div>
 
         <h1 class="noticia-titulo">
           {{ noticia.titulo }}
@@ -72,61 +73,62 @@
       <aside class="noticia-sidebar">
 
         <h3 class="sidebar-titulo">
-          Ultimas notícias
+          Últimas notícias
         </h3>
 
-        {% for noticia in noticias %}
         <div class="sidebar-lista">
-            <a href="/noticia/{{ noticia.id }}"
-          class="noticia-card"
-          target="_blank">
 
-          {% if noticia.imagem %}
-            <img src="{{ noticia.imagem }}" alt="{{ noticia.titulo }}">
-          {% else %}
-            <div class="noticia-img-placeholder">
-              <i class="fas fa-newspaper"></i>
-            </div>
-          {% endif %}
+          {% for item in noticias[:3] %}
 
-          <div class="noticia-card-body">
-            <span class="noticia-categoria">{{ noticia.categoria }}</span>
-            <h4>{{ noticia.titulo }}</h4>
-            <p>{{ noticia.resumo }}</p>
-            <div class="noticia-meta">
-              <small><i class="fas fa-calendar"></i> {{ noticia.data }}</small>
-              <small><i class="fas fa-user"></i> {{ noticia.autor }}</small>
-            </div>
-            <button class="btn-ler-mais">Ler mais</button>
-          </div>
-
-        </a>
-        </div>
-        {% endfor %}
-        <!-- <div class="sidebar-lista">
-          
-          {% if noticias%}
-          {% for item in noticias[:2] %}
-          
-          <a
-            href="/noticia/{{ item.id }}"
-            class="sidebar-card"
-          >
-
-            <img
-              src="{{ item.imagem }}"
-              alt="{{ item.titulo }}"
+            <a
+              href="/noticia/{{ item.id }}"
+              class="noticia-card"
             >
 
-            <div class="sidebar-info">
-              <h4>{{ item.titulo }}</h4>
-            </div>
+              {% if item.imagem %}
+                <img
+                  src="{{ item.imagem }}"
+                  alt="{{ item.titulo }}"
+                >
+              {% else %}
+                <div class="noticia-img-placeholder">
+                  <i class="fas fa-newspaper"></i>
+                </div>
+              {% endif %}
 
-          </a>
+              <div class="noticia-card-body">
+
+                <span class="noticia-categoria">
+                  {{ item.categoria }}
+                </span>
+
+                <h4>{{ item.titulo }}</h4>
+
+                <p>{{ item.resumo }}</p>
+
+                <div class="noticia-meta">
+                  <small>
+                    <i class="fas fa-calendar"></i>
+                    {{ item.data }}
+                  </small>
+
+                  <small>
+                    <i class="fas fa-user"></i>
+                    {{ item.autor }}
+                  </small>
+                </div>
+
+                <button class="btn-ler-mais">
+                  Ler mais
+                </button>
+
+              </div>
+
+            </a>
 
           {% endfor %}
-          {% endif %}
-        </div> -->
+
+        </div>
 
       </aside>
 
